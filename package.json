@@ -1,0 +1,10 @@
+{
+    "name": "angular-with-node-example",
+    "version": "0.0.1",
+    "description": "Simple Angular with Node.js Example.",
+    "main": "server.js",
+    "author": "Morris",
+    "dependencies": {
+        "express": "^4.10.8"
+    }
+}

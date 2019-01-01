@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html>
+	<head>
+		<!-- META -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+		<title>Angular with Node.js App</title>
+
+		<!-- SCROLLS -->
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+		<style>
+			html 					{ overflow-y:scroll; }
+			body 					{ padding-top:50px; }
+			#todo-list 				{ margin-bottom:30px; }
+			#todo-form 	 			{ margin-bottom:50px; }
+		</style>
+
+		<!-- SPELLS -->
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script><!-- load angular -->
+	</head>
+
+	<body>
+		<div ng-app="myApp" ng-controller="myCtrl" class="container">
+			<div class="jumbotron text-center">
+				<h1>Hello {{name}}</h1>
+			</div>
+
+			<form>
+				<div class="form-group">
+					<label for="exampleInputEmail1">Name</label>
+					<input ng-model="name" type="text" class="form-control" placeholder="Enter your name">
+				</div>
+			</form>
+		</div>
+
+		<script>
+			var app = angular.module("myApp", []);
+
+			app.controller("myCtrl", function($scope) {
+			   $scope.firstName = "John";
+			   $scope.lastName = "Doe";
+			});
+		</script>
+	</body>
+</html>
